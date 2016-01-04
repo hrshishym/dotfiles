@@ -1,0 +1,11 @@
+""""""""""""""""""""""""""""""""
+""" color setting
+""""""""""""""""""""""""""""""""
+colorscheme torte
+
+hi Comment        guifg=darkgreen
+hi SpecialKey     guifg=#303030
+hi NonText        guifg=#303030
+hi CursorLine     guibg=#202020
+hi CursorColumn   guibg=#202020
+
