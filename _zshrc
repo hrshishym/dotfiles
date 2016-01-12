@@ -1,17 +1,52 @@
-# Lines configured by zsh-newuser-install
+
+################################
+# key bind
+################################
+bindkey -e
+
+################################
+# History
+################################
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/t86676/.zshrc'
 
+setopt hist_ignore_dups # no-add history previous command
+setopt hist_expand      # expand history when completion
+setopt pushd_ignore_dups
+setopt auto_pushd
+setopt hist_no_store
+setopt hist_reduce_blanks
+
+################################
+# Completion
+################################
+#autoload -U colors                                  # color display on prompt
+autoload colors                                  # color display on prompt
+colors
+
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+zstyle ':completion:*:default' menu select=2
 
+setopt auto_cd            # cd with directry name
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # complete ignorecase
+
+setopt auto_menu          # display completion candidate when press TAB
+
+setopt magic_equal_subst  # complete after =
+
+# ls completion color
+eval `dircolors`
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+################################
 # Prompt
+################################
 PROMPT='[%F{yellow}%n@%m%f]%~%# '
 
 # VCS display
@@ -25,10 +60,28 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
+
+################################
+# options
+################################
+setopt extended_glob
+
+setopt no_flow_control                              # desable C-s, C-q
+
+
+
+################################
 # User alias
+################################
+# check after expanding to origina command
+setopt complete_aliases
+
 alias lll='ls -lart'
 
+
+################################
 # TMUX setting
+################################
 TERM=xterm-256color
 if [ -z $TMUX ]; then
   tmux -2
