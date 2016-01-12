@@ -8,6 +8,7 @@ ln -sf $SCRIPT_DIR/_bundlerc        ~/.bundlerc
 ln -sf $SCRIPT_DIR/_editorconfig    ~/.editorconfig
 ln -sf $SCRIPT_DIR/_tmux.conf       ~/.tmux.conf
 ln -sf $SCRIPT_DIR/_zshrc           ~/.zshrc
+ln -sf $SCRIPT_DIR/_zshenv          ~/.zshenv
 
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.temp/vim
