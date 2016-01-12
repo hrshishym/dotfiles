@@ -62,6 +62,7 @@ hi SpecialKey   ctermfg=8
 hi NonText      ctermfg=8
 hi CursorLine   cterm=none ctermbg=234
 hi CursorColumn            ctermbg=234
+hi Comment      ctermfg=DarkGreen
 
 """"""""""""""""""""""""""""""""
 """ Plug in
