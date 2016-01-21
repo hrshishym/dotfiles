@@ -79,6 +79,7 @@ setopt complete_aliases
 
 alias lll='ls -lart'
 alias rm='rm -i'
+alias cp='cp -i'
 
 
 ################################
