@@ -64,6 +64,7 @@ hi CursorLine   cterm=none ctermbg=234
 hi CursorColumn            ctermbg=234
 hi Comment      ctermfg=DarkGreen
 hi Search       ctermfg=Black ctermbg=Yellow
+hi Visual       cterm=reverse ctermbg=none
 
 """"""""""""""""""""""""""""""""
 """ Plug in

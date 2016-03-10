@@ -80,7 +80,7 @@ setopt complete_aliases
 alias lll='ls -lart'
 alias rm='rm -i'
 alias cp='cp -i'
-
+alias gtkwave='gtkwave > /dev/null 2>&1'
 
 ################################
 # TMUX setting
